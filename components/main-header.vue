@@ -21,12 +21,12 @@
         <img src="../assets/img/new_avatar.svg" alt="" />
       </div>
       <div class="main_header-contact font-semibold text-base basis-1/3 flex flex-col items-end">
-        <a href="#" class="flex hover:text-purple-500	">
+        <a href="#" class="flex hover:text-purple-500	items-center">
           <h4 class="mr-1 opacity-70">Baixar cv</h4>
-          <img src="../assets/img/ArrowLineDown.svg" alt="">
+          <font-awesome-icon icon="fa-solid fa-cloud-arrow-down" />
         </a>
         <button class="flex mt-3 p-3 ">
-          <img class="mr-2" src="../assets/img/WhatsappLogo.svg" alt="">
+          <font-awesome-icon icon="fa-brands fa-whatsapp" />
           <span class="opacity-70">Vamos conversar</span>
         </button>
       </div>
