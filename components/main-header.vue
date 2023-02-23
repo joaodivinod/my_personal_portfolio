@@ -1,19 +1,36 @@
 <template>
-  <header class="main-container main_header">
-    <div class="main_header-info">
-      <h2 class="font-bold">👋 Saudações!</h2>
-      <h1 class="text-white font-bold">João Divino</h1>
-      <h3>Frontend Developer Analyst</h3>
-    </div>
-    <div class="main_header-avatar">
-      <img src="../assets/img/new_avatar.svg" alt="" />
-    </div>
-    <div>
-      <div class="main_header-contact">
-        <h4>Baixar cv</h4>
-        <button>Vamos conversar</button>
+  <header class="main_header container mx-auto mt-16">
+    <nav>
+      <span>Aqui vai ter um menu</span>
+    </nav>
+    <section class="flex flex-row items-center	">
+      <div class="main_header-info basis-1/3">
+        <h2 class="font-bold">👋 Saudações!</h2>
+        <h1 class="md:mt-6 text-white font-bold">João <br> Divino</h1>
+        <h3 class="md:mt-4 md:text-sm">Frontend Developer Analyst</h3>
+        <div class="flex md:mt-5">
+          <a href="https://www.linkedin.com/in/jo%C3%A3o-divino/" target="blank" class="md:mr-4">
+            <img src="../assets/img/linkedin.svg" alt="">
+          </a>
+          <a href="https://github.com/joaodivinod" target="blank">
+            <img src="../assets/img/github.svg" alt="">
+          </a>
+        </div>
       </div>
-    </div>
+      <div class="main_header-avatar basis-2/3">
+        <img src="../assets/img/new_avatar.svg" alt="" />
+      </div>
+      <div class="main_header-contact font-semibold text-base basis-1/3 flex flex-col items-end">
+        <a href="#" class="flex hover:text-purple-500	">
+          <h4 class="mr-1 opacity-70">Baixar cv</h4>
+          <img src="../assets/img/ArrowLineDown.svg" alt="">
+        </a>
+        <button class="flex mt-3 p-3 ">
+          <img class="mr-2" src="../assets/img/WhatsappLogo.svg" alt="">
+          <span class="opacity-70">Vamos conversar</span>
+        </button>
+      </div>
+    </section>
   </header>
 </template>
 <script>
@@ -23,13 +40,11 @@ export default {
 </script>
 <style lang="scss">
 .main_header {
-  margin-top: 50px;
-  display: flex;
-  width: 100%;
-  justify-content: center;
-  align-items: center;
   &-info {
-    & h1 { font-size: 3.25rem; }
+    & h1 {
+      font-size: 3.25rem;
+      line-height: 4rem;
+    }
     & h2 {
       color: var(--medium-purple);
       background-color: rgba(122, 74, 226, 0.1);
@@ -37,17 +52,33 @@ export default {
       border-radius: 17px;
       width: 9rem;
     }
-    width: 20%;
+
+    & h3 { color: #fff; opacity: 0.5; }
+
+    & a { transition: 500ms; &:hover{ transform: scale(1.1); } }
   }
   &-avatar {
-    width: 60%;
     display: flex;
     justify-content: center;
     align-items: center;
     & img {
-      width: 40%;
+      width: 70%;
     }
   }
-  &-contact { width: 20%; }
+  &-contact {
+    color: var(--medium-purple);
+
+    & button {
+      transition: 500ms;
+      border: 1px solid var(--medium-purple);
+      border-radius: 17px;
+      width: 12rem;
+
+      &:hover{
+        background: var(--medium-purple);
+        color: #090E16;
+      }
+    }
+  }
 }
 </style>
