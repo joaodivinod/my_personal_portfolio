@@ -1,0 +1,5 @@
+export default {
+  welcome: 'Welcome to my website!',
+  about: 'About',
+  contact: 'Contact'
+}

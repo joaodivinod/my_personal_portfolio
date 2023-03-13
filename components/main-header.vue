@@ -6,6 +6,11 @@
     <section class="flex flex-row items-center	">
       <div class="main_header-info basis-1/3">
         <h2 class="font-bold">👋 Saudações!</h2>
+        <!-- <h1>{{ $t('welcome') }}</h1> -->
+        <!-- <router-link :to="{ path: switchLocalePath('fr') }">fr</router-link>
+        <router-link :to="{ path: switchLocalePath('en') }">en</router-link>
+        <router-link :to="{ path: switchLocalePath('pt-br') }">pt</router-link>
+        <router-link :to="{ path: switchLocalePath('es') }">Es</router-link> -->
         <h1 class="md:mt-6 text-white font-bold">João <br> Divino</h1>
         <h3 class="md:mt-4 md:text-sm">Frontend Developer Analyst</h3>
         <div class="flex md:mt-5">
