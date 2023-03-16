@@ -6,6 +6,5 @@ export default {
     ptPt: 'Português (Portugal)',
     es: 'Espanhol',
     fr: 'Francês',
-  },
-  welcome: 'Bem vindo ao meu site'
+  }
 }

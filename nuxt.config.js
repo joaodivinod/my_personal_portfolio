@@ -61,17 +61,29 @@ export default {
         file: 'es-ES.js'
       },
       {
+        code: 'en-uk',
+        iso: 'en-GB',
+        name: 'English (UK)',
+        file: 'en-GB.js'
+      },
+      {
+        code: 'en',
+        iso: 'en-US',
+        name: 'English (US)',
+        file: 'en-US.js'
+      },
+      {
         code: 'pt-br',
         iso: 'pt-BR',
         name: 'Português do Brasil',
         file: 'pt-BR.js'
       },
       {
-        code: 'en',
-        iso: 'en-US',
-        name: 'English',
-        file: 'en-US.js'
-      },
+        code: 'pt',
+        iso: 'pt-PT',
+        name: 'Português (Portugal)',
+        file: 'pt-PT.js'
+      },      
       {
         code: 'fr',
         iso: 'fr-FR',

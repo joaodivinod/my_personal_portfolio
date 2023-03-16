@@ -1,12 +1,22 @@
+<script>
+import LanguageSelector from '../components/LanguageSelector.vue'
+export default {
+  name: 'MainHeader',
+  components: {
+    LanguageSelector
+  },
+}
+</script>
 <template>
   <header class="main_header container mx-auto mt-16">
+    <LanguageSelector/>
     <nav>
       <span>Aqui vai ter um menu</span>
     </nav>
     <section class="flex flex-row items-center	">
       <div class="main_header-info basis-1/3">
         <h2 class="font-bold">👋 Saudações!</h2>
-        <!-- <h1>{{ $t('welcome') }}</h1> -->
+        <h1>{{ $t('welcome') }}</h1>
         <!-- <router-link :to="{ path: switchLocalePath('fr') }">fr</router-link>
         <router-link :to="{ path: switchLocalePath('en') }">en</router-link>
         <router-link :to="{ path: switchLocalePath('pt-br') }">pt</router-link>
@@ -38,11 +48,6 @@
     </section>
   </header>
 </template>
-<script>
-export default {
-  name: 'MainHeader',
-}
-</script>
 <style lang="scss">
 .main_header {
   &-info {

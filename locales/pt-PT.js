@@ -1,6 +1,6 @@
 export default {
   languages: {
-    en: 'Inglês (EUA)',
+    en: { name: 'Inglês (EUA)', code:'en' },
     enUk: 'Inglês (EUA)',
     pt: 'Português do Brasil',
     ptPt: 'Português (Portugal)',
