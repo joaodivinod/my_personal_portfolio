@@ -1,22 +1,23 @@
 <template>
-<section>
-
-<div class="">
-  <div>
-    <div  @click="toggleDropdown">
-      <img :src="selectedFlag" class="w-24">
-    </div>
-  </div>
-
-  <div v-show="showDropdown">
-    <div class="py-1" role="none">
-      <div v-for="(language, index) in locales" :key="index" @click="selectLanguage(language)"> 
-        <img class="w-24" :src="language.flag" alt="">
+  <section @mouseenter="toggleDropdown" @mouseleave="toggleDropdown">
+    <div class="language_dropdown" >
+      <div class="language_dropdown-selected_flag">
+        <img :src="selectedFlag" class="w-24">
+        <font-awesome-icon icon="fa-solid fa-caret-down" class="arrow-icon" />
+      </div>
+      <div v-show="showDropdown" class="language_dropdown-dropdown_list">
+        <div
+          v-for="(language, index) in locales" :key="index"
+          class="language_dropdown-dropdown_list-dropdown-item"
+          :class="{'selected-language': language.code === $i18n.locale}"
+          @click="selectLanguage(language)"
+        >
+            <img :src="language.flag" class="w-24" alt="">
+            <font-awesome-icon v-show="language.code === $i18n.locale" icon="fa-solid fa-check" class="check-icon" />
+        </div>
       </div>
     </div>
-  </div>
-</div>
-</section>
+  </section>
 </template>
 
 <script lang="ts">
@@ -33,11 +34,11 @@ export default defineComponent({
     }
   },
 
-mounted() {
-  // @ts-ignore
-  const objetoEncontrado = locales.find(objeto => objeto.code === this.$i18n.locale);
-  this.selectedFlag = objetoEncontrado?.flag ?? '';
-},
+  mounted() {
+    // @ts-ignore
+    const selectedLanguage = this.locales.find(objeto => objeto.code === this.$i18n.locale);
+    this.selectedFlag = selectedLanguage?.flag ?? '';
+  },
 
   methods: {
     toggleDropdown() {
@@ -53,54 +54,54 @@ mounted() {
     changeLanguage(lang: string) {
       // @ts-ignore
       this.$i18n.setLocale(lang);
-  }
+    }
   },
 });
 </script>
 
-<style lang="sass">
-.language-dropdown
-  position: relative
-  display: inline-block
-  font-family: Arial, Helvetica, sans-serif
-  cursor: pointer
+<style lang="scss">
+.language_dropdown{
+  position: absolute;
+  right: 50px;
+  width: 60px;
+  cursor: pointer;
 
-.selected-language
-  display: flex
-  align-items: center
-  padding: 0.5rem
-  background-color: #7289da
-  color: white
+  &-selected_flag{
+    height: 30px;
+    background: #271E4B;
+    border-radius: 6px 6px 0 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    & img{
+      width: 24px;
+      margin-right: 5px;
+    }
+  }
 
-  img
-    margin-right: 0.5rem
-    height: 1rem
-
-ul
-  list-style-type: none
-  margin: 0
-  padding: 0
-  position: absolute
-  z-index: 1
-  top: 100%
-  left: 0
-  right: 0
-  background-color: #fff
-  border-radius: 0.5rem
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2)
-
-li
-  display: flex
-  align-items: center
-  padding: 0.5rem
-  color: #333
-  font-weight: bold
-  transition: background-color 0.2s
-
-  img
-    margin-right: 0.5rem
-    height: 1rem
-
-  &:hover
-    background-color: #f1f1f1
+  &-dropdown_list{
+    background: #271E4B;
+    margin-top: 5px;
+    padding-bottom: 5px;
+    border-radius: 0 0 6px 6px;
+      & img{
+      width: 24px;
+      margin-right: 5px;
+    }
+    &-dropdown-item{
+      display: flex;
+      align-items: center;
+      padding: 5px 0 5px 12px;
+    }
+  }
+}
+.arrow-icon,
+.check-icon {
+  color: #fff;
+  width: 9px;
+}
+.selected-language{
+  background-color: #5f4ba1;
+  
+}
 </style>
