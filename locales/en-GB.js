@@ -1,5 +1,10 @@
 export default {
   welcome: 'Greetings!',
-  about: 'About',
-  contact: 'Contact'
+  nav: [
+    'Home',
+    'About me',
+    'Portfolio',
+    'Skills',
+    'Contact'
+    ]
 }

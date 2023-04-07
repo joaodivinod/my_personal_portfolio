@@ -1,5 +1,10 @@
 export default {
   welcome: 'Salutations!',
-  about: 'About',
-  contact: 'Contact'
+  nav: [
+    'Accueil',
+    'À propos de moi',
+    'Portfolio',
+    'Compétences',
+    'Contact'
+    ]
 }

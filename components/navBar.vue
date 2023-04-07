@@ -6,11 +6,7 @@ export default {
 <template>
   <nav>
     <ul>
-      <li>Home</li>
-      <li>Sobre mim</li>
-      <li>Porifolio</li>
-      <li>Habilidades</li>
-      <li>Contato</li>
+      <li v-for="(item, index) in $t('nav')" :key="index">{{item}}</li>
     </ul>
   </nav>
 </template>
