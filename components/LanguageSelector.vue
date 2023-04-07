@@ -91,7 +91,11 @@ export default defineComponent({
     &-dropdown-item{
       display: flex;
       align-items: center;
+      transition: 300ms;
       padding: 5px 0 5px 12px;
+      &:hover{
+        background-color: #0e0922;
+      }
     }
   }
 }

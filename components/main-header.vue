@@ -1,22 +1,23 @@
 <script>
 import LanguageSelector from '../components/LanguageSelector.vue'
+import NavBar from '../components/navBar.vue'
 export default {
   name: 'MainHeader',
   components: {
-    LanguageSelector
+    LanguageSelector,
+    NavBar
   },
 }
 </script>
 <template>
   <header class="main_header container mx-auto mt-16">
-    <LanguageSelector/>
-    <nav>
-      <span>Aqui vai ter um menu</span>
-    </nav>
+    <section class="main_header-navs">
+      <LanguageSelector/>
+      <NavBar/>
+    </section>
     <section class="flex flex-row items-center	">
       <div class="main_header-info basis-1/3">
-        <h2 class="font-bold">👋 Saudações!</h2>
-        <h1>{{ $t('welcome') }}</h1>
+        <h2 class="font-bold">👋 {{$t('welcome')}}</h2>
         <h1 class="md:mt-6 text-white font-bold">João <br> Divino</h1>
         <h3 class="md:mt-4 md:text-sm">Frontend Developer Analyst</h3>
         <div class="flex md:mt-5">
@@ -85,6 +86,11 @@ export default {
         color: #090E16;
       }
     }
+  }
+  &-navs{
+    display: flex;
+    justify-content: center;
+    margin-bottom: 150px;
   }
 }
 </style>
