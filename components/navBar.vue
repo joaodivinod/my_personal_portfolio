@@ -4,7 +4,8 @@
       <li
         v-for="(item, index) in $t('nav')"
         :key="index"
-        class="px-3 py-2 text-base font-medium leading-5 text-white hover:text-purple-600 cursor-pointer transition duration-300 ease-in-out">
+        class="px-3 py-2 text-base font-medium leading-5 text-white hover:text-purple-600 cursor-pointer transition duration-300 ease-in-out"
+        >
         {{item}}
       </li>
     </ul>
