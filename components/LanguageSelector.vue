@@ -106,6 +106,21 @@ export default defineComponent({
 }
 .selected-language{
   background-color: #5f4ba1;
-  
+}
+
+@media screen and (max-width: 767px) {
+  .language_dropdown{
+    right: 12px;
+    width: 47px;
+  }
+
+  .language_dropdown-dropdown_list img {
+    width: 19px;
+    margin-right: 5px;
+  }
+
+  .language_dropdown-selected_flag img {
+    width: 19px;
+  }
 }
 </style>

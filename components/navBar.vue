@@ -1,37 +1,22 @@
-<script>
-export default {
-  name:'NavBar'
-}
-</script>
 <template>
-  <nav>
-    <ul>
-      <li v-for="(item, index) in $t('nav')" :key="index">{{item}}</li>
+  <nav class="hidden md:flex text-white">
+    <ul class="flex items-center">
+      <li
+        v-for="(item, index) in $t('nav')"
+        :key="index"
+        class="px-3 py-2 text-base font-medium leading-5 text-white hover:text-purple-600 cursor-pointer transition duration-300 ease-in-out">
+        {{item}}
+      </li>
     </ul>
   </nav>
 </template>
-<style lang="scss">
-nav {
-  color: #fff;
-  & ul {
-    display: flex;
-    & li{
-      margin-right: 16px;
-      font-weight: 400;
-      &:hover{
-        color: #7B4AE2;
-        cursor: pointer;
-        transition: 300ms;
-        // font-weight: 600;
-        text-rendering: optimizeLegibility;
-        backface-visibility: hidden;
-      }
-    }
-  }
+
+<script>
+export default {
+  name: 'NavBar'
 }
-@media screen and (max-width: 700px) {
-  nav {
-    display: none;
-  }
-}
+</script>
+
+<style>
+
 </style>
