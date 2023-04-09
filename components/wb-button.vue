@@ -1,10 +1,15 @@
 <script>
 export default {
-  name:'WhatsappButton'
+  name:'WhatsappButton',
+    methods: {
+    redirectUser() {
+      window.open('https://contate.me/joaodivino', '_blank');
+    }
+  }
 }
 </script>
 <template>
-  <button class="flex mt-3 p-2 md:p-3 justify-center items-center">
+  <button class="flex mt-3 p-2 md:p-3 justify-center items-center" @click="redirectUser">
     <font-awesome-icon icon="fa-brands fa-whatsapp" />
     <span class="opacity-70">{{$t('talk')}}</span>
   </button>  
