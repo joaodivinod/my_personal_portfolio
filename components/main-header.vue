@@ -1,11 +1,13 @@
 <script>
 import LanguageSelector from '../components/LanguageSelector.vue'
 import NavBar from '../components/navBar.vue'
+import WhatsappButton from '../components/wb-button.vue'
 export default {
   name: 'MainHeader',
   components: {
     LanguageSelector,
-    NavBar
+    NavBar,
+    WhatsappButton
   },
 }
 </script>
@@ -54,10 +56,7 @@ export default {
         </div>
       </div>
       <div class="main_header-contact font-semibold text-base basis-1/3 flex flex-col items-end mr-auto md:mr-0">
-        <button class="flex mt-3 p-2 md:p-3 justify-center items-center">
-          <font-awesome-icon icon="fa-brands fa-whatsapp" />
-          <span class="opacity-70">{{$t('talk')}}</span>
-        </button>
+        <WhatsappButton/>
       </div>
     </section>
   </header>
@@ -89,30 +88,11 @@ export default {
       width: 70%;
     }
   }
-  &-contact {
-    color: var(--medium-purple);
-
-    & button {
-      transition: 500ms;
-      border: 1px solid var(--medium-purple);
-      border-radius: 17px;
-      width: 12rem;
-
-      &:hover{
-        background: var(--medium-purple);
-        color: #090E16;
-      }
-    }
-  }
   &-navs{
     display: flex;
     justify-content: center;
     margin-bottom: 150px;
   }
-  .fa-whatsapp {
-  font-size: 1.5rem;
-  margin-right: 8px;
-}
 @media screen and (max-width: 767px) {
   .main_header {
     &-navs{
@@ -143,18 +123,6 @@ export default {
     border-radius: 21px;
     width: 122px;
     font-size: 14px;
-  }
-
-  .main_header-contact button {
-    width: 170px;
-    & span{
-      font-size: 14px;
-    }
-  }
-
-  .main_header .fa-whatsapp {
-    font-size: 18px;
-    margin-right: 8px;
   }
 }
 }
