@@ -12,7 +12,7 @@ export default {
 }
 </script>
 <template>
-  <header class="main_header personal_container mx-auto mt-16">
+  <header id="home" class="main_header personal_container mx-auto mt-16">
     <section class="main_header-navs">
       <LanguageSelector/>
       <NavBar/>

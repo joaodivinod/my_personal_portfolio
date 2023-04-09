@@ -4,7 +4,6 @@ export default {
   nav: [
     'Home',
     'About',
-    'Portfolio',
     'Skills',
     'Contact'
     ]

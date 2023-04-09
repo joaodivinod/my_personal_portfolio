@@ -4,7 +4,6 @@ export default {
   nav: [
     'Início',
     'Sobre mim',
-    'Portefólio',
     'Competências',
     'Contacto'
     ]

@@ -4,7 +4,7 @@ export default {
 }
 </script>
 <template>
-  <section class="about">
+  <section id="about" class="about">
     <div class="personal_container md:pt-28 pt-16 pb-16 md:pb-28 m-auto">
       <div class="flex about-itens">
         <div class="flex items-center">

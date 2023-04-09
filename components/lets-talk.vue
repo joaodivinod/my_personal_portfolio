@@ -23,7 +23,7 @@ export default {
 }
 </script>
 <template>
-  <section class="talk personal_container relative">
+  <section id="contact" class="talk personal_container relative">
   <h2>Entre em contato</h2>
   <div class="flex md:flex-row flex-col justify-between items-center md:max-w-[500px] w-full">
     <WhatsappButton/>
