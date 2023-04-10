@@ -1,24 +1,9 @@
-<template>
-  <nav class="hidden md:flex text-white">
-    <ul class="flex items-center">
-      <li
-        v-for="(item, index) in $t('nav')"
-        :key="index"
-        class="px-3 py-2 text-base font-medium leading-5 text-white hover:text-purple-600 cursor-pointer transition duration-300 ease-in-out"
-        @click="goToSection(index)"
-      >
-        {{item}}
-      </li>
-    </ul>
-  </nav>
-</template>
-
 <script>
 export default {
   name: 'NavBar',
   methods: {
     goToSection(index) {
-      if (index === 0) { // First item clicked
+      if (index === 0) {
         const homeSection = document.getElementById('home');
         window.scrollTo({
           top: homeSection.offsetTop - 64,
@@ -50,7 +35,20 @@ export default {
   }
 }
 </script>
-
+<template>
+  <nav class="hidden md:flex text-white">
+    <ul class="flex items-center">
+      <li
+        v-for="(item, index) in $t('nav')"
+        :key="index"
+        class="px-3 py-2 text-base font-medium leading-5 text-white hover:text-purple-600 cursor-pointer transition duration-300 ease-in-out"
+        @click="goToSection(index)"
+      >
+        {{item}}
+      </li>
+    </ul>
+  </nav>
+</template>
 <style scoped>
 html {
   scroll-behavior: smooth;

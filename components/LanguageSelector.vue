@@ -1,25 +1,3 @@
-<template>
-  <section @mouseenter="toggleDropdown" @mouseleave="toggleDropdown">
-    <div class="language_dropdown" >
-      <div class="language_dropdown-selected_flag">
-        <img :src="selectedFlag" class="w-24">
-        <font-awesome-icon icon="fa-solid fa-caret-down" class="arrow-icon" />
-      </div>
-      <div v-show="showDropdown" class="language_dropdown-dropdown_list">
-        <div
-          v-for="(language, index) in locales" :key="index"
-          class="language_dropdown-dropdown_list-dropdown-item"
-          :class="{'selected-language': language.code === $i18n.locale}"
-          @click="selectLanguage(language)"
-        >
-            <img :src="language.flag" class="w-24" alt="">
-            <font-awesome-icon v-show="language.code === $i18n.locale" icon="fa-solid fa-check" class="check-icon" />
-        </div>
-      </div>
-    </div>
-  </section>
-</template>
-
 <script lang="ts">
 import { defineComponent } from 'vue';
 import locales from '~/locales/locales.js'
@@ -58,6 +36,27 @@ export default defineComponent({
   },
 });
 </script>
+<template>
+  <section @mouseenter="toggleDropdown" @mouseleave="toggleDropdown">
+    <div class="language_dropdown" >
+      <div class="language_dropdown-selected_flag">
+        <img :src="selectedFlag" class="w-24">
+        <font-awesome-icon icon="fa-solid fa-caret-down" class="arrow-icon" />
+      </div>
+      <div v-show="showDropdown" class="language_dropdown-dropdown_list">
+        <div
+          v-for="(language, index) in locales" :key="index"
+          class="language_dropdown-dropdown_list-dropdown-item"
+          :class="{'selected-language': language.code === $i18n.locale}"
+          @click="selectLanguage(language)"
+        >
+            <img :src="language.flag" class="w-24" alt="">
+            <font-awesome-icon v-show="language.code === $i18n.locale" icon="fa-solid fa-check" class="check-icon" />
+        </div>
+      </div>
+    </div>
+  </section>
+</template>
 
 <style lang="scss">
 .language_dropdown{

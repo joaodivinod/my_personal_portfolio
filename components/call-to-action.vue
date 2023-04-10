@@ -1,3 +1,8 @@
+<script>
+export default {
+  name:'CallToAction'
+}
+</script>
 <template>
  <section class="ideas flex flex-col items-center">
   <div class="personal_container text-center pt-20 pb-20 flex flex-col text-white">
@@ -6,13 +11,6 @@
   </div>
  </section>
 </template>
-
-<script>
-export default {
-  name:'CallToAction'
-}
-</script>
-
 <style lang="scss">
   .ideas{
     margin-top: 200px;

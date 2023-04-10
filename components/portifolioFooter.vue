@@ -1,3 +1,14 @@
+<script>
+export default {
+  name: 'PortifolioFooter',
+  computed: {
+    currentYear () {
+      const year = new Date().getFullYear();
+      return year.toString();
+    }
+  },
+}
+</script>
 <template>
   <footer class="flex flex-col justify-center items-center">
   <div class="flex personal_container justify-center items-center pt-8 pb-8 m-auto">
@@ -11,19 +22,6 @@
   <span class="text-white opacity-75 text-center md:mt-2 mt-4 mb-4">Criado por - João Divino · {{ currentYear }}</span>
   </footer>
 </template>
-
-<script>
-export default {
-  name: 'PortifolioFooter',
-  computed: {
-    currentYear () {
-      const year = new Date().getFullYear();
-      return year.toString();
-    }
-  },
-}
-</script>
-
 <style lang="scss">
 footer{
   background: #14142A;
