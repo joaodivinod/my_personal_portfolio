@@ -36,7 +36,7 @@ export default {
 }
 </script>
 <template>
-  <nav class="hidden md:flex text-white">
+  <nav class="hidden md:flex text-white w-full justify-center items-center pt-5 pb-5 bg-red-900 fixed">
     <ul class="flex items-center">
       <li
         v-for="(item, index) in $t('nav')"
@@ -52,6 +52,11 @@ export default {
 <style scoped>
 html {
   scroll-behavior: smooth;
+}
+nav{
+  margin-top: -64px;
+  background: #090e16;
+  z-index: 999;
 }
 .section-container {
   scroll-margin-top: 6rem;

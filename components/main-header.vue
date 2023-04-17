@@ -12,10 +12,11 @@ export default {
 }
 </script>
 <template>
+  <section>
+      <NavBar/>
   <header id="home" class="main_header personal_container mx-auto mt-16">
     <section class="main_header-navs">
       <LanguageSelector/>
-      <NavBar/>
     <div class="md:hidden flex md:mt-5">
       <a href="https://www.linkedin.com/in/jo%C3%A3o-divino/" target="blank" class="md:mr-4">
         <img src="../assets/img/linkedin.svg" alt="">
@@ -25,7 +26,7 @@ export default {
       </a>
     </div>
     </section>
-    <section class="flex flex-col md:flex-row items-center	">
+    <section class="flex flex-col md:flex-row items-center mt-20">
       <div class="main_header-info basis-1/3">
         <h2 class="font-bold hidden md:flex">👋 {{$t('welcome')}}</h2>
         <h1 class="md:mt-6 text-white font-bold hidden md:flex mt-2">João<br> Divino</h1>
@@ -60,6 +61,7 @@ export default {
       </div>
     </section>
   </header>
+  </section>
 </template>
 <style lang="scss">
 .main_header {
@@ -91,7 +93,7 @@ export default {
   &-navs{
     display: flex;
     justify-content: center;
-    margin-bottom: 150px;
+    // margin-bottom: 150px;
   }
 @media screen and (max-width: 767px) {
   .main_header {

@@ -57,13 +57,14 @@ export default defineComponent({
     </div>
   </section>
 </template>
-
 <style lang="scss">
 .language_dropdown{
+  z-index: 9999;
   position: absolute;
   right: 50px;
   width: 60px;
   cursor: pointer;
+  top: 30px;
 
   &-selected_flag{
     height: 30px;
