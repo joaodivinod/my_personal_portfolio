@@ -21,5 +21,6 @@ export default {
   ],
   skills: 'Tecnologias e habilidades',
   contact: 'Entre em contato',
-  footer: 'Criado por '
+  footer: 'Criado por',
+  emailAlert: 'E-mail Copiado'
 }

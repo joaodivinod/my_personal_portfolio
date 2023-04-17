@@ -32,7 +32,8 @@ export default {
       <h4 class="text-white mb-5 opacity-50">joaodivinod@gmail.com</h4>
       <font-awesome-icon icon="fa-solid fa-copy" @click="copyText"/>
       <div ref="tooltip" class="tooltip hidden absolute bottom-0 left-1/2 transform -translate-x-1/2 animate-fadeIn">
-      <font-awesome-icon icon="fa-solid fa-square-check" class="text-white mr-3" /> E-mail Copiado!
+      <font-awesome-icon icon="fa-solid fa-square-check" class="text-white mr-3" />
+      {{$t('emailAlert')}}
       </div>
     </div>
   </div>
