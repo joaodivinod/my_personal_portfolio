@@ -24,7 +24,7 @@ export default {
 </script>
 <template>
   <section id="contact" class="talk personal_container relative">
-  <h2>Entre em contato</h2>
+  <h2>{{ $t('contact') }}</h2>
   <div class="flex md:flex-row flex-col justify-between items-center md:max-w-[500px] w-full">
     <WhatsappButton/>
     <div class="flex flex-col mt-10">

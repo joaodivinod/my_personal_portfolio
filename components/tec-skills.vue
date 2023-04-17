@@ -5,7 +5,7 @@ export default {
 </script>
 <template>
   <section id="skills" class="tec personal_container">
-    <h2>Tecnologias e habilidades</h2>
+    <h2>{{ $t('skills') }}</h2>
     <img src="../assets/img/tecs.svg" alt="">
   </section>
 </template>

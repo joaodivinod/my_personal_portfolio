@@ -6,8 +6,8 @@ export default {
 <template>
  <section class="ideas flex flex-col items-center">
   <div class="personal_container text-center pt-20 pb-20 flex flex-col text-white">
-    <h1 class="font-bold">Vamos dar vida <br class="md:hidden"> as suas Ideias !</h1>
-    <p class="opacity-50 md:mt-1 mt-2">Com anos de experiência no desenvolvimento de sites, páginas de vendas e sistemas complexos, posso te ajudar a dar vida a seus projetos e colocá-los no ar !</p>
+    <h1 class="font-bold">{{ $t('lifeHeader') }}</h1>
+    <p class="opacity-50 md:mt-1 mt-2">{{ $t('lifeText') }}</p>
   </div>
  </section>
 </template>

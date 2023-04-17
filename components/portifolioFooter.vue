@@ -19,7 +19,7 @@ export default {
       <img src="../assets/img/github.svg" alt="">
     </a>
   </div>
-  <span class="text-white opacity-75 text-center md:mt-2 mt-4 mb-4">Criado por - João Divino · {{ currentYear }}</span>
+  <span class="text-white opacity-75 text-center md:mt-2 mt-4 mb-4">{{ $t('footer') }} - João Divino · {{ currentYear }}</span>
   </footer>
 </template>
 <style lang="scss">

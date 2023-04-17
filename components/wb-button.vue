@@ -33,7 +33,7 @@ button {
   }
   @media screen and (max-width: 767px) {
   button {
-    width: 170px;
+    width: auto;
     & span{
       font-size: 14px;
     }

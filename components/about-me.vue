@@ -9,26 +9,23 @@ export default {
       <div class="flex about-itens">
         <div class="flex items-center">
           <font-awesome-icon icon="fa-solid fa-users"/>
-          <h3 class="text-white font-bold ml-4">+ de 100 clientes</h3>
+          <h3 class="text-white font-bold ml-4">{{ $t('aboutCustomers') }}</h3>
         </div>
         <div class="flex items-center">
           <font-awesome-icon icon="fa-solid fa-certificate" />
-          <h3 class="text-white font-bold ml-4">+ de 5 anos experiencia</h3>
+          <h3 class="text-white font-bold ml-4">{{ $t('aboutExperience') }}</h3>
         </div>
         <div class="flex">
           <font-awesome-icon icon="fa-solid fa-rocket" />
-          <h3 class="text-white font-bold ml-4">+ de 50 projetos</h3>
+          <h3 class="text-white font-bold ml-4">{{ $t('aboutProjects') }}</h3>
         </div>
       </div>
       <div class="about-info flex md:flex-row flex-col text-white md:mt-20 mt-12">
         <div class="md:basis-2/6 flex justify-start items-center ">
-          <h2 class="font-bold md:text-left text-center md:mb-0 mb-6">Olá meu nome é <br class="md:flex hidden"> João Divino saiba <br class="md:flex hidden"> mais sobre mim</h2>
+          <h2 class="font-bold md:text-left text-center md:mb-0 mb-6 md:pr-5">{{ $t('aboutHeader') }}</h2>
         </div>
         <div class="md:basis-4/6">
-        <p>sou um desenvolvedor web com vasta experiência em diversos formatos de páginas, incluindo apresentação de produtos, sites de lançamento, páginas de educação a distância, entre outras. Também trabalhei em projetos de pessoas e empresas famosas e possuo prática em colaborar com times em projetos escaláveis e performáticos.</p>
-        <p>Sou apaixonado pelo que faço e utilizo as melhores e mais recentes tecnologias do mercado para garantir que o seu projeto seja entregue exatamente como o previsto no layout inicial, dentro do prazo estipulado e com um preço justo.</p>
-        <p>Meus objetivos profissionais incluem sempre me manter atualizado com as últimas tendências e tecnologias no desenvolvimento web, e continuar entregando soluções eficientes e inovadoras para meus clientes. O que me inspira e motiva nessa área é a possibilidade de criar algo que possa ser usado por muitas pessoas e que faça a diferença em suas vidas.</p>
-        <p>Estou animado em colaborar com você e transformar sua ideia em realidade. Vamos trabalhar juntos e levar seu projeto para o próximo nível!</p>
+        <p v-for="(item, index) in $t('aboutText')" :key="index">{{ item }}</p>
         </div>
       </div>
     </div>
